@@ -1,0 +1,28 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main(){
+      int t;
+      cin>>t;
+      while(t--){
+          int n;
+          cin>>n;
+          int count = 0;
+          int num = n;
+          while(num){
+             int temp = num%10;
+             num/=10;
+             if(temp!=0) count++;
+          }
+          cout<<count<<endl;
+          int tomul = 1;
+          while(n){
+              int temp = n%10;
+              if(temp!=0) cout<<temp*tomul<<" ";
+              tomul*=10;
+              n/=10;
+          }
+          cout<<endl;
+      }
+      return 0;
+}
