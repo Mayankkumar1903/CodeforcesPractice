@@ -1,0 +1,23 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main(){
+      int n;
+      cin>>n;
+      int arr[n];
+      for(int i=0;i<n;i++) cin>>arr[i];
+      int maxi = 0, mini = 101, maxind = -1, minind = -1;
+      for(int i=0;i<n;i++){
+          if(arr[i]>maxi){
+              maxi = arr[i];
+              maxind = i;
+          }
+          if(arr[i]<=mini){
+              mini = arr[i];
+              minind = i;
+          }
+      }
+      if(maxind>minind) cout<<(maxind-0)+(n-minind)-2<<endl;
+      else cout<<(maxind-0)+(n-minind)-1<<endl;
+      return 0;
+}
