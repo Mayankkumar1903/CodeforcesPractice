@@ -1,0 +1,33 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main(){
+      int r,c;
+      cin>>r>>c;
+      int flag = 1;
+      for(int i=1;i<=r;i++){
+          if(i%2!=0){
+              for(int j=1;j<=c;j++){
+                  cout<<"#";
+              }   
+          }
+          else{
+              if(flag){
+                  for(int j=1;j<c;j++){
+                      cout<<".";
+                  }
+                  cout<<"#";
+                  flag = 0;
+              }
+              else{
+                  cout<<"#";
+                  for(int j=2;j<=c;j++){
+                      cout<<".";
+                  }
+                  flag = 1;
+              }
+          }
+          cout<<endl;
+      }
+      return 0;
+}
