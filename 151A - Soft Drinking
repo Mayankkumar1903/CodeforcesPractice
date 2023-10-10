@@ -1,0 +1,13 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main(){
+      int n, k, l, c, d, p, nl, np;
+      cin>>n>>k>>l>>c>>d>>p>>nl>>np;
+      int n1 = (k*l) /nl;
+      int n2 = c*d;
+      int n3 = p/np;
+      int mini = min(n1,n2);
+      int minires = min(mini,n3);
+      cout<< minires/n<<endl;
+}
