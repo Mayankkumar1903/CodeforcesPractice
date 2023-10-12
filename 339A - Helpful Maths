@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    string s;
+    cin>>s;
+    int cntone = 0 ,cnttwo = 0,cntthree = 0;
+    for(int i=0;i<s.size();i++){
+          if(s[i]=='1')cntone++;
+          else if(s[i]=='2')cnttwo++;
+          else if(s[i]=='3') cntthree++;
+    }
+    s = "";
+    while(cntone--){
+        s+='1';
+        if(cntone) s+='+';
+    }
+    while(cnttwo--){
+        if(s.size()!=0) s+='+';
+        s+='2';
+    }
+    while(cntthree--){
+        if(s.size()!=0) s+='+';
+        s+='3';
+    }
+    cout<<s<<endl;
+    return 0;
+}
