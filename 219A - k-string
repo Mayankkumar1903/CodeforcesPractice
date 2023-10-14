@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+#define ll              long long
+#define ull             unsigned long long
+#define pb              push_back
+#define fastread()      (ios_base:: sync_with_stdio(false),cin.tie(NULL));
+using namespace std;
+int main()
+{
+    fastread();
+    int n;
+    cin>>n;
+    string s;
+    cin>>s;
+    int c[26]={0};
+    if(s.size()%n!=0){
+        if(s.size()%n!=0) cout<<-1<<endl;
+        return 0;
+    }
+    for(int i=0;i<s.size();i++){
+        c[s[i]-'a']++;
+    }
+    for(int i=0;i<26;i++){
+        if(c[i]%n != 0){
+            cout<<-1<<endl;
+            return 0;
+        } 
+    }
+    string res = "";
+    for(int i=0;i<26;i++){
+        for(int j=0;j<c[i]/n;j++){
+            res += char('a'+i);
+        }
+    }
+    for(int i=0;i<n;i++){
+        cout<<res;
+    }
+    cout<<endl;
+    return 0;
+}
